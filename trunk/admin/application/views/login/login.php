@@ -40,14 +40,15 @@
 			<div class="main-content">
 				<div class="row">
 					<div class="col-sm-10 col-sm-offset-1">
-						<div class="login-container">
+						<div class="login-container" style="width:430px;">
 							<div class="center">
-								<h1>
-									<i class="ace-icon fa fa-leaf green"></i>
-									<span class="red">Ace</span>
-									<span class="white" id="id-text2">Application</span>
-								</h1>
-								<h4 class="blue" id="id-company-text">&copy; Company Name</h4>
+								<h3>
+								
+									<span class="red">Welcome to </span>
+									<span class="white" id="id-text2">Let'smeet</span>
+									<span class="red">Administration </span>
+								</h3>
+								<h4 class="blue" id="id-company-text">&copy; Quadridge Technologies Pvt Ltd.</h4>
 							</div>
 
 							<div class="space-6"></div>
@@ -188,38 +189,45 @@
 											<div class="space-6"></div>
 											<p> Enter your details to begin: </p>
 
-											<form>
+											<form accept-charset="UTF-8" method="post" action="<?php echo $base_url;?>users/register" name="frmRegister" id="frmRegister">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
+															<input type="email" name="email" class="form-control" placeholder="Email"  required />
 															<i class="ace-icon fa fa-envelope"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" name="username" class="form-control" placeholder="Username" required />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" name="password" class="form-control" placeholder="Password" required />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Repeat password" />
+															<input type="password" class="form-control" placeholder="Repeat password" required />
 															<i class="ace-icon fa fa-retweet"></i>
 														</span>
 													</label>
+													<label class="block clearfix">
+														<span class="block input-icon input-icon-right">
+															<input type="text" name="companyname" class="form-control" placeholder="Company Name" required/>
+															<i class="ace-icon fa fa-group"></i>
+														</span>
+													</label>
+
 
 													<label class="block">
-														<input type="checkbox" class="ace" />
+														<input type="checkbox" name="acceptTerms"  class="ace" required />
 														<span class="lbl">
 															I accept the
 															<a href="#">User Agreement</a>
@@ -234,7 +242,7 @@
 															<span class="bigger-110">Reset</span>
 														</button>
 
-														<button type="button" class="width-65 pull-right btn btn-sm btn-success">
+														<button type="submit" class="width-65 pull-right btn btn-sm btn-success">
 															<span class="bigger-110">Register</span>
 
 															<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
