@@ -74,14 +74,23 @@ class Users_model extends CI_Model
 		$data['status'] = "success";
 		return $data;
 
-		print "came here";
-		exit;
-
-
-
+	}
+	function checkLogin($Userid , $Password)
+	{
+		$where = " a.LMLoginEnabled = 1 and a.LMUserid='".trim($Userid)."' and a.LMPassword = '".trim($Password)."' and a.LMLoginId = b.LMLoginId ";
+		
+		$result = $this->db->get_where(" LMLoginUsers a , LMUserProfile b ",$where , NULL , FALSE);
+		if ($result->num_rows() > 0)
+		{
+			$row = $result->row();
+			//$this->session->set_userdata($row);
+			return true;
+		}
+		return false;
 
 
 	}
+	
 	
 }
 

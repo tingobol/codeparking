@@ -33,6 +33,12 @@
 		<script src="<?php echo $base_url;?>assets/js/html5shiv.js"></script>
 		<script src="<?php echo $base_url;?>assets/js/respond.js"></script>
 		<![endif]-->
+		<script src="<?php echo $base_url;?>assets/js/letsmeet.js"></script>
+		<script type='text/javascript'>
+			var BASEURL = "<?php echo $base_url;?>";
+			var IMGURL = "<?php echo $base_url;?>assets/images/";
+			var xmlhttp = null;
+		</script>
 	</head>
 
 	<body class="login-layout">
@@ -65,18 +71,18 @@
 
 											<div class="space-6"></div>
 
-											<form>
+											<form method="POST" action="<?php echo $base_url;?>dashboard" id="frmLogin" name="frmLogin"/>
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="text" id="username" name="username" class="form-control" placeholder="Username" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
 													</label>
 
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input type="password" id="password" name="password" class="form-control" placeholder="Password" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
 													</label>
@@ -89,7 +95,7 @@
 															<span class="lbl"> Remember Me</span>
 														</label>
 
-														<button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+														<button type="button" class="width-35 pull-right btn btn-sm btn-primary" onClick="javascript:sendRequest(0);">
 															<i class="ace-icon fa fa-key"></i>
 															<span class="bigger-110">Login</span>
 														</button>
