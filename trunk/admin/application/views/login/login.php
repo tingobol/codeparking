@@ -42,14 +42,15 @@
 					<div class="col-sm-10 col-sm-offset-1">
 						<div class="login-container" style="width:430px;">
 							<div class="center">
+								<img src="<?php echo $base_url;?>assets/images/quadridge-logo-530-270.png" />
+							</div>
+							<!--div class="center">
 								<h3>
 								
-									<span class="red">Welcome to </span>
-									<span class="white" id="id-text2">Let'smeet</span>
-									<span class="red">Administration </span>
+									<span class="white" id="id-text2">Let'smeet Administration </span>
 								</h3>
-								<h4 class="blue" id="id-company-text">&copy; Quadridge Technologies Pvt Ltd.</h4>
-							</div>
+								<h4 class="white" id="id-company-text">&copy; Quadridge Technologies Pvt Ltd.</h4>
+							</div-->
 
 							<div class="space-6"></div>
 
@@ -98,7 +99,7 @@
 												</fieldset>
 											</form>
 
-											<div class="social-or-login center">
+											<!--div class="social-or-login center">
 												<span class="bigger-110">Or Login Using</span>
 											</div>
 
@@ -116,7 +117,7 @@
 												<a class="btn btn-danger">
 													<i class="ace-icon fa fa-google-plus"></i>
 												</a>
-											</div>
+											</div-->
 										</div><!-- /.widget-main -->
 
 										<div class="toolbar clearfix">
@@ -177,7 +178,7 @@
 										</div>
 									</div><!-- /.widget-body -->
 								</div><!-- /.forgot-box -->
-
+								
 								<div id="signup-box" class="signup-box widget-box no-border">
 									<div class="widget-body">
 										<div class="widget-main">
