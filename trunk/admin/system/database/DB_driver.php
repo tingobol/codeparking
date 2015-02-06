@@ -1265,27 +1265,37 @@ class CI_DB_driver {
 		// Convert tabs or multiple spaces into single spaces
 		$item = preg_replace('/[\t ]+/', ' ', $item);
 
+
 		// If the item has an alias declaration we remove it and set it aside.
 		// Basically we remove everything to the right of the first space
-		if (strpos($item, ' ') !== FALSE)
+		if (preg_match('/^([^\s]+) (AS )*([a-zA-Z0-9_]+)$/i', $item, $matches))
 		{
-			$alias = strstr($item, ' ');
-			$item = substr($item, 0, - strlen($alias));
+			$item = $matches[1];
+
+			// escape the alias
+			if ($protect_identifiers === TRUE)
+			{
+				$alias = ' '.$matches[2].$this->_escape_identifiers($matches[3]);
+			}
+			else
+			{
+				$alias = ' '.$matches[2].$matches[3];
+			}
 		}
 		else
 		{
 			$alias = '';
 		}
 
-		// This is basically a bug fix for queries that use MAX, MIN, etc.
-		// If a parenthesis is found we know that we do not need to
-		// escape the data or add a prefix.  There's probably a more graceful
-		// way to deal with this, but I'm not thinking of it -- Rick
-		if (strpos($item, '(') !== FALSE)
+		// This is a bug fix for queries that use MAX, MIN, DATE_FORMAT, <= etc.
+		// If the the identifier contains any character that is NOT alphanumeric or underscore
+		// we assume that we do not need to escape the identifier or add a prefix.
+		if (preg_match('/^([a-zA-Z0-9_\.]+)$/', $item) == 0)
 		{
 			return $item.$alias;
-		}
+		} 
 
+		
 		// Break the string apart if it contains periods, then insert the table prefix
 		// in the correct location, assuming the period doesn't indicate that we're dealing
 		// with an alias. While we're at it, we will escape the components
