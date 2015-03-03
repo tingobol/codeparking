@@ -51,7 +51,7 @@
 
 						<b class="arrow"></b>
 					</li>
-
+					<!-- Address book start-->
 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-star"></i>
@@ -124,6 +124,8 @@
 
 						</ul>
 					</li>
+					<!-- Address book end -->
+					<!-- Meetings book start-->
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
@@ -166,6 +168,15 @@
 
 										<b class="arrow"></b>
 									</li>
+									<li class="">
+										<a href="two-menu-1.html">
+											<i class="menu-icon fa fa-caret-right"></i>
+											Merge Meetings
+										</a>
+
+										<b class="arrow"></b>
+									</li>
+
 
 									<li class="">
 										<a href="two-menu-2.html">
@@ -181,6 +192,8 @@
 
 						</ul>
 					</li>
+					<!-- Meetings book end-->
+					<!-- Settings book start-->
 
 					<li class="">
 						<a href="#" class="dropdown-toggle">
@@ -254,6 +267,7 @@
 
 						</ul>
 					</li>
+					<!-- Settings book start-->
 					<li class="">
 						<a href="#" class="dropdown-toggle">
 							<i class="menu-icon fa fa-star"></i>
