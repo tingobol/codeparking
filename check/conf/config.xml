@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<version>0.9.0-28</version>
+	<mail>MAIL</mail>
+	<chromeLatestVersion>39</chromeLatestVersion>
+	<firefoxLatestVersion>35</firefoxLatestVersion>
+	<downloadFilePath url="test_image.jpg"/>
+	<ports>
+		<port>
+			<name>Port 9123</name>
+			<number>9123</number>
+		</port>
+	</ports>
+	<rtmpapps>
+		<app>
+			<name>RTMP BigBlueButton app</name>
+			<uri>rtmp://letsmeet.quadridge.com/bigbluebutton</uri>
+		</app>
+		<app>
+			<name>RTMP deskShare app</name>
+			<uri>rtmp://letsmeet.quadridge.com/deskShare</uri>
+		</app>
+		<app>
+			<name>RTMP video app</name>
+			<uri>rtmp://letsmeet.quadridge.com/video</uri>
+		</app>
+		<app>
+			<name>RTMP sip app</name>
+			<uri>rtmp://letsmeet.quadridge.com/sip</uri>
+		</app>
+		<app>
+			<name>RTMPT BigBlueButton app</name>
+			<uri>rtmpt://letsmeet.quadridge.com/bigbluebutton</uri>
+		</app>
+		<app>
+			<name>RTMPT deskShare app</name>
+			<uri>rtmpt://letsmeet.quadridge.com/deskShare</uri>
+		</app>
+		<app>
+			<name>RTMPT video app</name>
+			<uri>rtmpt://letsmeet.quadridge.com/video</uri>
+		</app>
+		<app>
+			<name>RTMPT sip app</name>
+			<uri>rtmpt://letsmeet.quadridge.com/sip</uri>
+		</app>
+	</rtmpapps>
+</config>
